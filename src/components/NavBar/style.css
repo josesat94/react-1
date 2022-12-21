@@ -1,0 +1,59 @@
+
+
+
+.navList{
+    height: 8vh;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid rgb(184, 248, 255);
+    background-color: rgb(184, 248, 255);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.navItem{
+    float: left;
+}
+
+.navItem a{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+}
+
+.navItem a:hover{
+    background-color: antiquewhite;
+}
+
+.logoCarrito{
+    width: 3%;
+    position: absolute;
+    right: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.brand{
+    width: 3%;
+    position: absolute;
+    left: 60px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
