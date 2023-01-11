@@ -1,0 +1,51 @@
+
+[
+    {
+        "id": 1,
+        "title": "zapatillas",
+        "price": 100,
+        "description": "Zapatilla Nike Modelo 1",
+        "category": "Ropa de hombre",
+        "image": "https://essential.vtexassets.com/arquivos/ids/165152/306-4220_1.jpg?v=636664753420630000",
+        "rating": {
+            "rate": 4.5,
+            "count": 120
+        } 
+    },
+    {
+        "id": 2,
+        "title": "zapatillas",
+        "price": 150,
+        "description": "Zapatilla Adidas Modelo 2",
+        "category": "Ropa de hombre",
+        "image": "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwc86d3ba4/products/AD_GY3581/AD_GY3581-1.JPG",
+        "rating": {
+            "rate": 3.5,
+            "count": 130
+        } 
+    },
+    {
+        "id": 3,
+        "title": "zapatillas",
+        "price": 160,
+        "description": "Zapatilla Rebook Modelo 3",
+        "category": "Ropa de mujer",
+        "image": "https://datalatienda.com/5483/zapatilla-reebok-flexagon-energy-w.jpg",
+        "rating": {
+            "rate": 4.5,
+            "count": 100
+        } 
+    },
+    {
+        "id": 4,
+        "title": "zapatillas",
+        "price": 180,
+        "description": "Zapatilla Lacoste Modelo 4",
+        "category": "Ropa de niño",
+        "image": "https://imagesa1.lacoste.com/dw/image/v2/BCWL_PRD/on/demandware.static/-/Sites-master/default/dwe3422cbf/43SUC0007_2Q9_01.jpg?imwidth=915&impolicy=product",
+        "rating": {
+            "rate": 4.5,
+            "count": 120
+        } 
+    }
+]
