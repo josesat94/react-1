@@ -1,5 +1,20 @@
+.containerGeneralTabla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.containerTabla{
+    width: 50%;
+    display: flex;
+    margin: 40px;
+}
+
 .tablaCart{
-    width: 100vw;
+    width: 100%;
 }
 
 .imgTabla{
@@ -7,5 +22,9 @@
 }
 
 .titleTabla{
-    width: 15vw;
+    width: 10vw;
+}
+
+.idTabla{
+    width: 5vw;
 }

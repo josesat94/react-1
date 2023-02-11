@@ -1,0 +1,41 @@
+.cartContainerGeneral {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin: 100px;
+    width: 70vw;
+}
+
+.containerImg{
+    width: 50%;
+}
+
+.imgCard{
+    width: 50%;
+    padding: 0px;
+    
+}
+
+.precio{
+    color: darkgreen;
+    font-weight: 900;
+}
+
+.cardBody {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.goCart{
+    color: aliceblue;
+    text-decoration: none;
+}

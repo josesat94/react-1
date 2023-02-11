@@ -69,23 +69,31 @@ const Cart = () => {
       {
         products.length !== 0 ?
           <>
-            <table className="table table-success table-striped">
-              <thead>
-                <tr>
-                  <th scope="col">id</th>
-                  <th scope="col">Image</th>
-                  <th scope="col">title</th>
-                  <th scope="col">price</th>
-                  <th scope="col">quantity</th>
-                  <th scope="col">remove</th>
-                </tr>
-              </thead>
-              <tbody>
-                {products.map(product => {
-                  return <TableRow key={product.id} product={product} />
-                })}
-              </tbody>
-            </table>
+            <div className='containerGeneralTabla'>
+              <div className='containerTabla'>
+                <table className="table table-success table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">id</th>
+                      <th scope="col">Image</th>
+                      <th scope="col">title</th>
+                      <th scope="col">price</th>
+                      <th scope="col">quantity</th>
+                      <th scope="col">remove</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {products.map(product => {
+                      return <TableRow key={product.id} product={product} />
+                    })}
+                  </tbody>
+                </table>
+
+              </div>
+
+            </div>
+
+
             {
               loader ?
                 <h2>Cargando...</h2>
