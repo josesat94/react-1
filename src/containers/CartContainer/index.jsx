@@ -11,6 +11,7 @@ import { db } from '../../firebase/config'
 import { doc, updateDoc } from "firebase/firestore";
 import { Link } from 'react-router-dom'
 import FormComp from '../../components/Form'
+import Spinner from 'react-bootstrap/Spinner';
 
 const Cart = () => {
 
@@ -99,7 +100,7 @@ const Cart = () => {
 
             {
               loader ?
-                <h3>Cargando...</h3>
+                <Spinner animation="grow" />
                 :
                 <button onClick={()=> setFormVis(true)}>Confirm purchase</button>
             }
@@ -116,6 +117,8 @@ const Cart = () => {
       {formVis ?
         <FormComp
           confirmPurchase = {confirmPurchase} 
+          formVis={formVis}
+          setFormVis={setFormVis}
          
         />
         : null
