@@ -20,18 +20,19 @@ const ItemDetail = ({ detail }) => {
 
     console.log(detail)
     return (
-        <div className='cartContainerGeneral'>
-            <div className='containerImg'>
-                <img src={detail.image} className="imgCard" alt="Producto en venta" />
+        <div className='cartContainerUltraGeneral'>
+            <div className='cartContainerGeneral'>
+                <div className='containerImg'>
+                    <img src={detail.image} className="imgCard" alt="Producto en venta" />
+                </div>
+                <div className="cardBody">
+                    <div className="card" style={{ width: '18rem' }}>
+                    <h2 className="">{detail.title}</h2>
+                    <p className="precio"> ${detail.price} </p>
+                    <p className=""> {detail.description} </p>
+                    <p className=""> {detail.category} </p>
             </div>
-            <div className="cardBody">
-                <div className="card" style={{ width: '18rem' }}>
-                <h2 className="">{detail.title}</h2>
-                <p className="precio"> ${detail.price} </p>
-                <p className=""> {detail.description} </p>
-                <p className=""> {detail.category} </p>
         </div>
-        
                 {
                     quantity === 0 ?
                         <ItemCount

@@ -1,12 +1,21 @@
-.cartContainerGeneral {
+.cartContainerUltraGeneral {
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: row;
     align-content: center;
     justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.cartContainerGeneral {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
     flex-direction: row;
     align-items: center;
-    margin: 100px;
+    margin: 0px;
     width: 70vw;
+    height: 90vh;
+    justify-content: center;
 }
 
 .containerImg{

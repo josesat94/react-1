@@ -10,6 +10,7 @@ import { async } from '@firebase/util'
 import { db } from '../../firebase/config'
 import { doc, updateDoc } from "firebase/firestore";
 import { Link } from 'react-router-dom'
+import FormComp from '../../components/Form'
 
 const Cart = () => {
 
@@ -19,15 +20,16 @@ const Cart = () => {
 
   const [loader, setLoader] = useState(false);
 
-  const confirmPurchase = async () => {
+  const confirmPurchase = async (dataDelFormulario) => {
+    const {phone, firstName, email} = dataDelFormulario
 
     try {
       setLoader(true);
 
       const order = generateOrderObject({
-        nombre: "Juan",
-        email: "juan@mmail.com",
-        telefono: "1234567",
+        nombre: firstName,
+        email: email,
+        telefono: phone,
         cart: products,
         total: total()
       })
@@ -60,6 +62,7 @@ const Cart = () => {
       console.log(error)
     } finally {
       setLoader(false);
+      setFormVis(false);
     }
   }
 
@@ -96,9 +99,9 @@ const Cart = () => {
 
             {
               loader ?
-                <h2>Cargando...</h2>
+                <h3>Cargando...</h3>
                 :
-                <button onClick={confirmPurchase}>Confirm purchase</button>
+                <button onClick={()=> setFormVis(true)}>Confirm purchase</button>
             }
           </>
           :
@@ -111,12 +114,12 @@ const Cart = () => {
       }
 
       {formVis ?
-        <form>
-          <input placeholder='Ingrese su nombre' />
-          <input placeholder='Ingrese su email' />
-          <input placeholder='Ingrese su telefono' />
-        </form>
-        : null}
+        <FormComp
+          confirmPurchase = {confirmPurchase} 
+         
+        />
+        : null
+      }
     </>
   )
 }
