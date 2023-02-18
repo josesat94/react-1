@@ -6,6 +6,7 @@ import './style.css'
 import { useParams } from 'react-router-dom'
 import { db } from '../../firebase/config'
 import { collection, getDocs, query, where } from "firebase/firestore";
+import useFirebase from '../../hooks/useFirebase';
 
 const ItemListContainer = ({ greeting }) => {
 
@@ -16,6 +17,12 @@ const ItemListContainer = ({ greeting }) => {
   const [AdVisibility, setAdVisibility] = useState(true)
 
   const { categoryId } = useParams()
+
+  const [productos, loading, error] = useFirebase(categoryId)
+
+  console.log(productos);
+  console.log(loading);
+  console.log(error);
 
   useEffect(() => {
     const handleEsc = (event) => {
@@ -58,23 +65,6 @@ const ItemListContainer = ({ greeting }) => {
 
     getProducts();
 
-    // fetch('https://fakestoreapi.com/products')
-    //   .then(response => {
-    //     console.log(response);
-    //     return response.json()
-    //   })
-    //   .then(products => {
-    //     if (categoryId) {
-    //       const productosFiltradosPorCategoria = products.filter(producto => producto.category === categoryId)
-          
-    //       setProducts(productosFiltradosPorCategoria)
-    //     } else {
-    //       setProducts(products)
-    //     }
-    //   })
-    //   .catch((err) => {
-    //     alert("Hubo un error")
-    //   });
   }, [categoryId])
 
 

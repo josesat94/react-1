@@ -2,6 +2,7 @@ import React from 'react'
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import {Shop} from '../../context/ShopProvider'
+import './style.css'
 
 const CartWidget = () => {
 
